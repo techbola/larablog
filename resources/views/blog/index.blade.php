@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 @foreach($blogs as $blog)
-                    <h2>
+                    <h2 class="post_title">
                         <a class="text-decoration-none" href="{{ route('blog.show', $blog->id) }}">
                             {{ $blog->title }}
                         </a>

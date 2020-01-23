@@ -12,10 +12,22 @@
             <div class="col-md-12">
                 @foreach($categories as $category)
                     <h2 class="post_title">
-                        <a class="text-decoration-none" href="{{ route('categories.show', $category->id) }}">
-                            {{ $category->name }}
-                        </a>
+                        {{ $category->name }}
                     </h2>
+                    <div class="float-left">
+                        <a class="btn btn-primary btn-sm" href="{{ route('categories.edit', $category->id) }}">
+                            EDIT
+                        </a>
+                    </div>
+                    <div class="float-left ml-2">
+                        <form class="ml-2" action="{{ route('categories.destroy', $category->id) }}" method="post">
+                            @csrf
+                            {{  method_field('DELETE') }}
+                            <button class="btn btn-danger btn-sm" type="submit">DELETE</button>
+                        </form>
+                    </div>
+                    <div class="clearfix"></div>
+                    <hr>
                 @endforeach
             </div>
         </div>

@@ -34,7 +34,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ route('admin.index') }}">{{ __('Dashboard') }}</a>
+                            <a class="nav-link" href="{{ route('admin.index') }}">{{ __('Admin Dashboard') }}</a>
                         </li>
                     </ul>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Blog;
 use App\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
@@ -54,12 +55,13 @@ class CategoryController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  int  $id
+     * @param Category $category
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($category)
     {
-        //
+        $category = Category::where('slug', $category)->first();
+        return view('categories.show', compact('category'));
     }
 
     /**

@@ -19,6 +19,18 @@
                 </div>
             </div>
             <div class="col-md-12">
+                <h6 class="float-left">Categories</h6>
+                    @foreach($blog->categories as $blog_category)
+                        <h5 class="float-left ml-2">
+                            <span class="badge badge-secondary">
+                                <a class="text-decoration-none text-white" href="{{ route('categories.show', $blog_category->slug) }}">
+                                    {{ $blog_category->name }}
+                                </a>
+                            </span>
+                        </h5>
+                    @endforeach
+                <div class="clearfix"></div>
+                <hr>
                 {{ $blog->body }}
             </div>
         </div>

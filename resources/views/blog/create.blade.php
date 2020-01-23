@@ -15,6 +15,21 @@
                         <label for="title">Title</label>
                         <input type="text" name="title" id="title" placeholder="Blog title" class="form-control">
                     </div>
+                    <div class="form-group form-check form-check-inline">
+
+{{--                        <select multiple name="category_id[]" id="category" class="form-control">--}}
+{{--                            @foreach($categories as $category)--}}
+{{--                                <option value="">{{ $category->name }}</option>--}}
+{{--                            @endforeach--}}
+{{--                        </select>--}}
+
+                        @foreach($categories as $category)
+                            <div class="ml-2">
+                                <input type="checkbox" name="category_id[]" value="{{ $category->id }}" class="form-check-input">
+                                <label for="form-check-label">{{ $category->name }}</label>
+                            </div>
+                        @endforeach
+                    </div>
                     <div class="form-group">
                         <label for="body">Body</label>
                         <textarea name="body" id="body" class="form-control"></textarea>

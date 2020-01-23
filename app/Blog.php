@@ -10,6 +10,10 @@ class Blog extends Model
     use SoftDeletes;
 
     protected $dates = ['deleted_at'];
-
     protected $fillable = ['title', 'body'];
+
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class);
+    }
 }

@@ -22,3 +22,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 // Admin routes
 Route::get('/admin', 'AdminController@index')
         ->name('admin.index');
+
+Route::resource('categories', 'CategoryController');

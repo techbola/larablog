@@ -18,3 +18,7 @@ Route::delete('/blog/{id}/delete', 'BlogsController@delete')->name('blog.delete'
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+// Admin routes
+Route::get('/admin', 'AdminController@index')
+        ->name('admin.index');

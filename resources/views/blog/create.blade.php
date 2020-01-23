@@ -5,7 +5,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="jumbotron">
-                    <h1>Crate a new blog</h1>
+                    <h1>Create a new blog</h1>
                 </div>
             </div>
             <div class="col-md-6">
